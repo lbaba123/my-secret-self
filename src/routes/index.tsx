@@ -56,7 +56,11 @@ function Index() {
       <div className="mx-auto flex min-h-screen max-w-2xl flex-col px-5 py-8 sm:py-12">
         {stage === "landing" && (
           <div className="m-auto text-center animate-[fadeIn_0.6s_ease]">
-            <div className="mb-6 text-7xl sm:text-8xl">💌</div>
+            <img
+              src={landingImg.url}
+              alt="Pink character"
+              className="mx-auto mb-2 w-56 sm:w-72 drop-shadow-[0_20px_40px_rgba(236,72,153,0.45)]"
+            />
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight drop-shadow-lg">
               The Interrogation
             </h1>
