@@ -1,0 +1,61 @@
+// Questions data. Each object has: id, text, type ("choice" | "text"), and optional `options` for choice type.
+// Edit freely — add `options: ["A", "B", "C"]` to any question to turn it into multiple choice.
+export type Question = {
+  id: number;
+  text: string;
+  type: "choice" | "text";
+  options?: string[];
+};
+
+export const questions: Question[] = [
+  { id: 1, text: "What's the most spontaneous thing you've ever done?", type: "text" },
+  { id: 2, text: "What's your go-to comfort food?", type: "choice", options: ["Pizza 🍕", "Ice cream 🍦", "Pasta 🍝", "Something else"] },
+  { id: 3, text: "If you could travel anywhere tomorrow, where would you go?", type: "text" },
+  { id: 4, text: "What's a random talent you have?", type: "text" },
+  { id: 5, text: "What's your biggest pet peeve?", type: "text" },
+  { id: 6, text: "What's your favorite childhood memory?", type: "text" },
+  { id: 7, text: "Are you a morning person or a night owl?", type: "choice", options: ["Morning person ☀️", "Night owl 🌙", "Somewhere in between"] },
+  { id: 8, text: "What's the funniest thing that's happened to you recently?", type: "text" },
+  { id: 9, text: "If you won a million dollars today, what's the first thing you'd do?", type: "text" },
+  { id: 10, text: "What's your guilty pleasure?", type: "text" },
+  { id: 11, text: "What's something you're really proud of?", type: "text" },
+  { id: 12, text: "What motivates you the most in life?", type: "text" },
+  { id: 13, text: "What's one lesson life has taught you recently?", type: "text" },
+  { id: 14, text: "What do you value most in friendships?", type: "text" },
+  { id: 15, text: "What's your biggest dream?", type: "text" },
+  { id: 16, text: "What does a perfect day look like to you?", type: "text" },
+  { id: 17, text: "What's something people often misunderstand about you?", type: "text" },
+  { id: 18, text: "Who has influenced your life the most?", type: "text" },
+  { id: 19, text: "What makes you feel appreciated?", type: "text" },
+  { id: 20, text: "What's one thing you'd like to improve about yourself?", type: "text" },
+  { id: 21, text: "What's the sweetest thing someone has ever done for you?", type: "text" },
+  { id: 22, text: "What quality do you find most attractive in a guy?", type: "text" },
+  { id: 23, text: "What's your love language?", type: "choice", options: ["Words of affirmation", "Quality time", "Acts of service", "Physical touch / Gifts"] },
+  { id: 24, text: "What does a healthy relationship look like to you?", type: "text" },
+  { id: 25, text: "Are you more of a planner or someone who goes with the flow?", type: "choice", options: ["Planner 📅", "Go with the flow 🌊", "A bit of both"] },
+  { id: 26, text: "What's a green flag you look for in people?", type: "text" },
+  { id: 27, text: "What's an instant turn-off for you?", type: "text" },
+  { id: 28, text: "What's your idea of a perfect date?", type: "text" },
+  { id: 29, text: "Do you believe in soulmates?", type: "choice", options: ["Absolutely 💞", "Not really", "Maybe..."] },
+  { id: 30, text: "What's something you wish more people understood about dating?", type: "text" },
+  { id: 31, text: "What's something you've always wanted to do but haven't yet?", type: "text" },
+  { id: 32, text: "If you could relive one day in your life, which would it be?", type: "text" },
+  { id: 33, text: "What's your biggest fear?", type: "text" },
+  { id: 34, text: "What gives your life meaning?", type: "text" },
+  { id: 35, text: "What kind of legacy would you like to leave behind?", type: "text" },
+  { id: 36, text: "What's something you're currently working on?", type: "text" },
+  { id: 37, text: "What's the best advice you've ever received?", type: "text" },
+  { id: 38, text: "When do you feel most at peace?", type: "text" },
+  { id: 39, text: "What's a challenge that made you stronger?", type: "text" },
+  { id: 40, text: "If you could have dinner with anyone, living or dead, who would it be?", type: "text" },
+  { id: 41, text: "What's your idea of the perfect first kiss?", type: "text" },
+  { id: 42, text: "What's the first thing you notice about a guy?", type: "text" },
+  { id: 43, text: "What's the most romantic thing someone could do for you?", type: "text" },
+  { id: 44, text: "What's something that always makes you smile?", type: "text" },
+  { id: 45, text: "What's the cutest compliment you've ever received?", type: "text" },
+  { id: 46, text: "If we went on a road trip together, what music are we playing?", type: "text" },
+  { id: 47, text: "What's one thing you'd like to know about me?", type: "text" },
+  { id: 48, text: "What kind of trouble do you usually get into?", type: "text" },
+  { id: 49, text: "Be honest, what was your first impression of me?", type: "text" },
+  { id: 50, text: "Last one — would you do this all over again with me? 💌", type: "choice", options: ["Yes, absolutely 💖", "Maybe 😏", "Ask me again later"] },
+];
