@@ -160,7 +160,12 @@ function Index() {
 
         {stage === "results" && (
           <div className="m-auto w-full text-center animate-[fadeIn_0.6s_ease]">
-            <div className="mb-4 text-7xl sm:text-8xl">🎉</div>
+            <img
+              src={resultsImg.url}
+              alt="Celebration"
+              className="mx-auto mb-4 w-48 sm:w-60 rounded-3xl shadow-2xl ring-4 ring-white/40"
+            />
+            <div className="mb-4 text-6xl">🎉</div>
             <h1 className="text-4xl sm:text-5xl font-extrabold drop-shadow-lg">
               You survived all 50!
             </h1>
