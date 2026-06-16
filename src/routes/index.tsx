@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { questions } from "@/data/questions";
+import landingImg from "@/assets/landing.png.asset.json";
+import avatar1 from "@/assets/avatar1.png.asset.json";
+import avatar2 from "@/assets/avatar2.png.asset.json";
+import resultsImg from "@/assets/results.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,7 +56,11 @@ function Index() {
       <div className="mx-auto flex min-h-screen max-w-2xl flex-col px-5 py-8 sm:py-12">
         {stage === "landing" && (
           <div className="m-auto text-center animate-[fadeIn_0.6s_ease]">
-            <div className="mb-6 text-7xl sm:text-8xl">💌</div>
+            <img
+              src={landingImg.url}
+              alt="Pink character"
+              className="mx-auto mb-2 w-56 sm:w-72 drop-shadow-[0_20px_40px_rgba(236,72,153,0.45)]"
+            />
             <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight drop-shadow-lg">
               The Interrogation
             </h1>
@@ -70,16 +78,23 @@ function Index() {
 
         {stage === "quiz" && (
           <>
-            <div className="mb-8">
-              <div className="mb-2 flex items-center justify-between text-sm font-medium text-white/90">
-                <span>Question {index + 1} of {total}</span>
-                <span>{Math.round(progress)}%</span>
-              </div>
-              <div className="h-3 w-full overflow-hidden rounded-full bg-white/20 backdrop-blur">
-                <div
-                  className="h-full rounded-full bg-gradient-to-r from-yellow-300 to-pink-200 transition-all duration-500"
-                  style={{ width: `${progress}%` }}
-                />
+            <div className="mb-8 flex items-center gap-3">
+              <img
+                src={(index % 2 === 0 ? avatar1 : avatar2).url}
+                alt=""
+                className="h-12 w-12 shrink-0 rounded-full object-cover ring-2 ring-white/60 shadow-lg"
+              />
+              <div className="flex-1">
+                <div className="mb-2 flex items-center justify-between text-sm font-medium text-white/90">
+                  <span>Question {index + 1} of {total}</span>
+                  <span>{Math.round(progress)}%</span>
+                </div>
+                <div className="h-3 w-full overflow-hidden rounded-full bg-white/20 backdrop-blur">
+                  <div
+                    className="h-full rounded-full bg-gradient-to-r from-yellow-300 to-pink-200 transition-all duration-500"
+                    style={{ width: `${progress}%` }}
+                  />
+                </div>
               </div>
             </div>
 
@@ -145,7 +160,12 @@ function Index() {
 
         {stage === "results" && (
           <div className="m-auto w-full text-center animate-[fadeIn_0.6s_ease]">
-            <div className="mb-4 text-7xl sm:text-8xl">🎉</div>
+            <img
+              src={resultsImg.url}
+              alt="Celebration"
+              className="mx-auto mb-4 w-48 sm:w-60 rounded-3xl shadow-2xl ring-4 ring-white/40"
+            />
+            <div className="mb-4 text-6xl">🎉</div>
             <h1 className="text-4xl sm:text-5xl font-extrabold drop-shadow-lg">
               You survived all 50!
             </h1>
